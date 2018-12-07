@@ -40,33 +40,12 @@ i {
   font-size: 80px;
   font-size: 8rem; }
 
-footer {
-  position: relative;
-  overflow: hidden;
-  height: 100px;
-  padding-top: 50px; }
-  footer p {
-    text-align: center;
-    font-size: 20px;
-    font-size: 2rem;
-    color: #c5d7dc; }
-  footer:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: -20px;
-    width: 120%;
-    height: 200px;
-    background: #e5edef;
-    z-index: -1;
-    -moz-transform: rotate(-3deg);
-    -ms-transform: rotate(-3deg);
-    -webkit-transform: rotate(-3deg);
-    transform: rotate(-3deg);
-    -moz-transform-origin: right center;
-    -ms-transform-origin: right center;
-    -webkit-transform-origin: right center;
-    transform-origin: right center; }
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-size: 2.4rem; }
+  a:hover {
+    color: #1a1a1a; }
 
-/*# sourceMappingURL=footer.css.map */
+/*# sourceMappingURL=layout.css.map */

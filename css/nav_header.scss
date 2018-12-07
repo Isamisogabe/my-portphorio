@@ -1,0 +1,129 @@
+@charset 'utf-8';
+@import 'compass';
+@import 'layout.scss';
+#nav_mdOverlay {
+  background-color: $subColor;
+  width: 100%;
+  position: fixed;
+  z-index: 97;
+  top: 0;
+  left: 0;
+}
+header {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  nav {
+    
+    .fa-bars {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 99;
+      display: none;
+      @media (max-width: 550px) {
+        display: block;
+        text-align: right;
+        
+      }
+    }
+    .fa-times {
+      z-index: 99;
+      display: none;
+      text-align: right;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 99;
+    }
+    // .fa-bars
+  
+    @media (max-width: 550px) {
+      #modalInclude {
+        display: none;
+        position: fixed;
+        color: #000;
+        top: 10%;
+        left: 0%;
+        z-index: 98;
+        margin-top: -0px;
+        margin-left: -0px;
+      }
+    }
+    ul {
+      margin: 20px 0;
+      list-style-type: none;
+      text-align: right;
+      @media(max-width: 550px) {
+        width: 100%;
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        margin: 0;
+        @include box-sizing(border-box);
+        padding: 0 5px;
+        transition: all .3s ease-in-out;
+        position: relative;
+        border-bottom: 1px solid $subColor;
+        @media(max-width: 550px) {
+          display: block;
+          @include fontsize(50);
+        }
+        
+        
+        @media(min-width: 551px) {
+          &:after, &:before {
+          content: '';
+          background: $orangeColor;
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          left: -1px;
+          height: 3px;
+          width: 1px;
+          z-index: -2;
+          @include transition(all .3s ease);
+          
+         }
+          &:hover {
+            &:after, &:before{
+              content: '';
+              width: 100%;
+              width: calc(100% + 1px);
+              background: $orangeColor;
+              z-index: 10;
+              
+            }
+          }
+        }
+        
+        
+        i {
+          color: $blueColor;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    
+  }
+  // nav
+  &:before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin: -100px;
+    width: 140%;
+    height: 150px;
+    background: $subColor;
+    z-index: -1;
+    @include transform(rotate(3deg));
+    @include transform-origin(left, center);
+    @media(max-width: 550px) {
+      margin-top: -100px;
+    }
+  }
+}

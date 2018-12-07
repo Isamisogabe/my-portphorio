@@ -1,0 +1,161 @@
+@charset "UTF-8";
+body {
+  font-size: 62.5%;
+  font-family: "Times New Roman", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Verdana, "MS Pゴシック", sans-serif;
+  background: #fff; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+h1 {
+  font-size: 72px;
+  font-size: 7.2rem; }
+
+h2 {
+  font-size: 48px;
+  font-size: 4.8rem; }
+  @media (max-width: 550px) {
+    h2 {
+      font-size: 60px;
+      font-size: 6rem; } }
+
+h3 {
+  font-size: 36px;
+  font-size: 3.6rem; }
+  @media (max-width: 550px) {
+    h3 {
+      font-size: 48px;
+      font-size: 4.8rem; } }
+
+p {
+  font-size: 24px;
+  font-size: 2.4rem; }
+
+i {
+  font-size: 80px;
+  font-size: 8rem; }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-size: 2.4rem; }
+  a:hover {
+    color: #1a1a1a; }
+
+#nav_mdOverlay {
+  background-color: #e5edef;
+  width: 100%;
+  position: fixed;
+  z-index: 97;
+  top: 0;
+  left: 0; }
+
+header {
+  position: relative;
+  overflow: hidden;
+  height: 150px; }
+  header nav .fa-bars {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    display: none; }
+    @media (max-width: 550px) {
+      header nav .fa-bars {
+        display: block;
+        text-align: right; } }
+  header nav .fa-times {
+    z-index: 99;
+    display: none;
+    text-align: right;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99; }
+  @media (max-width: 550px) {
+    header nav #modalInclude {
+      display: none;
+      position: fixed;
+      color: #000;
+      top: 10%;
+      left: 0%;
+      z-index: 98;
+      margin-top: -0px;
+      margin-left: -0px; } }
+  header nav ul {
+    margin: 20px 0;
+    list-style-type: none;
+    text-align: right; }
+    @media (max-width: 550px) {
+      header nav ul {
+        width: 100%;
+        text-align: center; } }
+    header nav ul li {
+      display: inline-block;
+      margin: 0;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0 5px;
+      transition: all .3s ease-in-out;
+      position: relative;
+      border-bottom: 1px solid #e5edef; }
+      @media (max-width: 550px) {
+        header nav ul li {
+          display: block;
+          font-size: 50px;
+          font-size: 5rem; } }
+      @media (min-width: 551px) {
+        header nav ul li:after, header nav ul li:before {
+          content: '';
+          background: #ffb600;
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          left: -1px;
+          height: 3px;
+          width: 1px;
+          z-index: -2;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        header nav ul li:hover:after, header nav ul li:hover:before {
+          content: '';
+          width: 100%;
+          width: calc(100% + 1px);
+          background: #ffb600;
+          z-index: 10; } }
+      header nav ul li i {
+        color: #5cb3f1; }
+      header nav ul li:last-child {
+        margin-right: 0; }
+  header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -100px;
+    width: 140%;
+    height: 150px;
+    background: #e5edef;
+    z-index: -1;
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -webkit-transform-origin: left center;
+    transform-origin: left center; }
+    @media (max-width: 550px) {
+      header:before {
+        margin-top: -100px; } }
+
+/*# sourceMappingURL=nav_header.css.map */

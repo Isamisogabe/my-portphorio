@@ -1,0 +1,37 @@
+@charset 'utf-8';
+@import 'compass';
+
+footer {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  padding-top: 50px;
+  
+  nav {
+    ul {
+      text-align: center;
+      list-style-type: none;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+  p {
+    text-align: center;
+    @include fontsize(20);
+    color: darken($subColor, 10%);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -20px;
+    width: 120%;
+    height: 200px;
+    background: $subColor;
+    z-index: -1;
+    @include transform(rotate(-3deg));
+    @include transform-origin(right, center)
+  }
+}

@@ -10,16 +10,19 @@
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    
     <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/works.css">
+    <link rel="stylesheet" href="./css/nav_header.css">
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -31,45 +34,112 @@
   <body>
     <header>
       <nav class="container">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#"><img src="./images/twitter.png" alt="twitter" srcset="./images/twitter@2x.png 2x"></a></li>
-          <li><a href="#"><img src="./images/email.png" alt="Email" srcset="./images/email@2x.png 2x"></a></li>
+        <a href='#modalInclude' class='modalBtnOn'><i class="fas fa-bars fa-2x"></i></a>
+        <a href='#modaiInclude' class='modalBtnOff'><i class="fas fa-times fa-2x"></i></a>
+        <ul id='modalInclude'>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://twitter.com/jgymMag"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="#"><i class="fa fa-envelope-square"></i></a></li>
         </ul>
       </nav>
     </header>
     
     <main>
-      <section id="works">
-        <h1>WORKs</h1>
+      <section id="works" class='container'>
+        <h1>Works</h1>
         <ul class="items">
-          <li class="item"><a href="#"><img src="./images/" alt=""></a></li>
-          <li class="item"><a href="#"><img src="./images/" alt=""></a></li>
-          <li class="item"><a href="#"><img src="./images/" alt=""></a></li>
-          <li class="item"><a href="#"><img src="./images/" alt=""></a></li>
+          <li class="item" id ='item_1'><a href="#"><div class='box-outer'><img src="./images/gymtacs/landing.png" alt="gymtacs"><div class='box-inner'><p>体操系情報共有サイト<br/>gymtacs</p></div></div></a></li>
+          <li class="item" id ='item_2'><a href="#"><div class='box-outer'><img src="./images/corporate/top.png" alt="corporate-site"><div class='box-inner'><p>コーポレートサイト</p></div></div></a></li>
+          <li class="item" id ='item_3'><a href="#"><div class='box-outer'><img src="./images/monolist/item.png" alt="monolist"><div class='box-inner'><p>モノリスト</p></div></div></a></li>
         </ul>
       </section>
     </main>
     <footer>
-      <nav class="container">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#"><img src="./images/twitter.png" alt="twitter" srcset="./images/twitter@2x.png 2x"></a></li>
-          <li><a href="#"><img src="./images/email.png" alt="Email" srcset="./images/email@2x.png 2x"></a></li>
-        </ul>
-      </nav>
+      
       <div class="container">
-        <p>@2017 Portforio IsamiSogabe all rights reserved.</p>
+        <p>@2018 Portforio IsamiSogabe all rights reserved.</p>
       </div>
     </footer>
-    
+    <div id='mdOverlay'>
+      <i id="mdCancel" class="fas fa-times fa-10x"></i>
+      <div>
+        <div class='mdContent container' id='gymtacs'>
+          <div class="eight columns">
+            <div class='fadePanel'>
+              <ul>
+                <li><img src="./images/gymtacs/item1.png" alt="gymtacs"></li>
+                <li><img src="./images/gymtacs/item2.png" alt="gymtacs"></li>
+                <li><img src="./images/gymtacs/item3.png" alt="gymtacs"></li>
+              </ul>
+              <div class="paginate"></div>
+              
+            </div>
+          </div>
+          <div class="four columns mdContent__inner">
+            <a href="https://gymtacs20181001.herokuapp.com/">Gymtacs</a>
+            <p>gymtacsはプログラミング系情報共有サイト「qiita」をもとに作成されたサイトです。<br/>主な機能は</p>
+            <ul>
+              <li>ユーザ記事投稿機能</li>
+              <li>Login/Signup機能</li>
+              <li>ユーザフォロー機能</li>
+            </ul>
+            <p>です。</p>
+            <span>(製作期間:３週間, 開発言語:ruby on rails)</span>
+          </div>
+          
+        </div>
+        <div class='mdContent container'>
+          <div class="eight columns">
+            <div class='fadePanel'>
+              <ul>
+                <li><img src="./images/corporate/item1.png" alt="corporateItem1"></li>
+                <li><img src="./images/corporate/item2.png" alt="corporateItem2"></li>
+                <li><img src="./images/corporate/item3.png" alt="corporateItem3"></li>
+              </ul>
+              <div class="paginate"></div>
+              
+            </div>
+          </div>
+          <div class="four columns mdContent__inner">
+            <h1>コーポレートサイト</h1>
+            <p>練習・学習用として自分で作成したコーポレートサイトです。レスポンシブに対応できるようにメディアクエリを上手く使いました。</p>
+            <span>開発期間：1週間<br/></span>
+            <span>使用したモノ：photoshop/HTML/CSS</span>
+          </div>
+        </div>
+        <div class='mdContent container'>
+          <div class="eight columns">
+            <div class='fadePanel'>
+              <ul>
+                <li><img src="./images/monolist/item1.png" alt="monolistItem1"></li>
+                <li><img src="./images/monolist/item2.png" alt="monolistItem2"></li>
+                <li><img src="./images/monolist/item3.png" alt="monolistItem3"></li>
+              </ul>
+              <div class="paginate"></div>
+              
+            </div>
+          </div>
+          <div class="four columns mdContent__inner">
+            <h1>Monolist</h1>
+            <p>楽天APIを用いて商品を検索し、ユーザがそれをWant商品として登録し、それらを他のユーザーに共有したりするサイト。</p>
+            <p>主な機能：</p>
+            <ul>
+              <li>ユーザお気に入り商品登録</li>
+              <li>Login/Signup</li>
+              <li>ユーザフォロー</li>
+              <li>商品人気ランキング</li>
+            </ul>
+            <span>使用言語：ruby on rails</span>
+            <span>開発期間：1.5週間</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/works.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

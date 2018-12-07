@@ -119,6 +119,7 @@ $(document).ready(function() {
       
       return false;
     });
+    
     if( selfWidth <= slideWidth) {
       self.append('<a href="javascript:void(0)" class="btn-prev fas fa-10x fa-angle-left"></a><a href="javascript:void(0)" class="btn-next fas fa-10x fa-angle-right"></a>')
           .find('ul').wrapAll('<div class="slideWrap" />');
@@ -139,6 +140,7 @@ $(document).ready(function() {
       });
       btnSet();
     }
+    
     function btnSet() {
       var ulLeft = parseInt(selfUl.css('left'), 10),
           maskWidth = selfWidth - slideWidth; //隠された部分の長さ
@@ -158,13 +160,19 @@ $(document).ready(function() {
     }
   });
   
+  
+  // トップページスクロール移動
   $('body').append('<a href="javascript:void(0);" class="fas fa-10x fa-angle-double-up" id="fixedTop"></a>');
   $('#fixedTop').on('click', function() {
     $('html,body').animate({scrollTop: '0'}, 500);
   });
   
   $(window).on('load scroll resize', function() {
-    var showTop = 3200;
+    var showTop = 3000;
+    if (w < 551) {
+      showTop = 3200;
+    }
+    
     
     if($(window).scrollTop() > showTop) {
       $('#fixedTop').fadeIn('normal');
