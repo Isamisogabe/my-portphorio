@@ -20,12 +20,21 @@ function responsive_nav() {
     console.log(w, h);
     // 551px未満の場合
     if ( w < 551 ) {
-      $('#modalInclude').css({opacity: '0', display: 'none'});
-    
+      
+      if ($('#nav_mdOverlay').attr('display') == 'block'){
+        $('#modalInclude').css({opacity: '0', display: 'none'});
+        $('.fa-bars').fadeIn(fadeTime);
+      } else {
+        $('#modalInclude').css({opacity: '0', display: 'none'});
+        $('.fa-bars').fadeIn(fadeTime);
+      }
+      
+      
     } else {
       $('#modalInclude').css({opacity: '1', display: 'block'});
+      $('.fa-bars').fadeOut(fadeTime);
     }
-    $('#nav_mdOverlay').css({height: h});
+    $('#nav_mdOverlay').css({height: h, width: w});
   });
   // ----------- w,h の記録 -----------//
   
@@ -36,16 +45,14 @@ function responsive_nav() {
     $('body').append('<div id="nav_mdOverlay"></div>');
     // modalボタンのフェードアウト
     
-    mdBtnOff.fadeIn(fadeTime);
-    $('#nav_mdOverlay').css({display: 'block', height: wdHeight, width: w})
-    .stop().animate({display: 'block', opacity: overlayOpacity , background: '#e4ecee'}, function() {
-      mdBtnOn.stop().animate({opacity: '0'}, fadeTime,  function() {
-        mdBtnOn.css({display: 'none'});
-      });
+    $('#nav_mdOverlay').css({display: 'block', height: wdHeight, width: w, opacity: '0'})
+    .stop().animate({display: 'block', opacity: overlayOpacity , background: '#e4ecee'}, fadeTime, function() {
+      
     });
     $('#modalInclude').css({opacity: '0', display: 'block'}).stop().animate({ opacity: overlayOpacity}, fadeTime);
-    $('nav .fa-times').css({display: 'block', opacity: '0'}).animate({opacity: '1', transform: 'rotate(360deg)'}, fadeTime);
-    
+    $('.fa-bars').fadeOut(fadeTime, function() {
+      $('.fa-times').fadeIn(fadeTime);
+    });
   });
   
   
@@ -55,10 +62,10 @@ function responsive_nav() {
     });
     $('#nav_mdOverlay').stop().animate({opacity: '0'}, fadeTime, function() {
       $('#nav_mdOverlay').remove();
-      mdBtnOn.css({opacity: '1'});
-      mdBtnOn.fadeIn(fadeTime);
-      mdBtnOff.fadeOut(fadeTime);
       
+      $('nav .fa-times').fadeOut(fadeTime, function() {
+        $('.fa-bars').fadeIn(fadeTime);
+      });
     });
     
   });

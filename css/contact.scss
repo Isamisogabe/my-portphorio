@@ -1,0 +1,46 @@
+@charset 'utf-8';
+@import 'layout.scss';
+@import 'compass';
+@import 'nav_header.scss';
+@import 'footer.scss';
+
+#contact {
+  margin-bottom: 150px;
+  h1{
+    border-bottom: 5px solid $orangeColor;
+    @media(max-width: 550px) {
+      text-align: center;
+      @include fontsize(48);
+    }
+  }
+  .contact__content {
+    padding: 30px;
+    border: #000 1px solid;
+    p{
+      @media(max-width: 550px) {
+        @include fontsize(16);
+      }
+    }
+    h3 {
+      @media(max-width: 550px) {
+        @include fontsize(20);
+      }
+    }
+    ul {
+      list-style-type: none;
+      text-align: center;
+      margin: 0;
+      li {
+        color: $blueColor;
+        display: inline;
+        margin: 20px 20px 0 0;
+        a {
+          i {
+            color: $blueColor;
+          }
+        }
+      }
+    }
+  }
+  // div
+}

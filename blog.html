@@ -10,16 +10,17 @@
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
+    <script src="https://use.fontawesome.com/6d3f6876b5.js"></script>
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/blog.css">
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -31,13 +32,15 @@
   <body>
     <header>
       <nav class="container">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#"><img src="./images/twitter.png" alt="twitter" srcset="./images/twitter@2x.png 2x"></a></li>
-          <li><a href="#"><img src="./images/email.png" alt="Email" srcset="./images/email@2x.png 2x"></a></li>
+        <a href='#modalInclude' class='modalBtnOn'><i class="fas fa-bars fa-2x"></i></a>
+        <a href='#modaiInclude' class='modalBtnOff'><i class="fas fa-times fa-2x"></i></a>
+        <ul id='modalInclude'>
+          <li href="#about"><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://twitter.com/jgymMag"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="#"><i class="fa fa-envelope-square"></i></a></li>
         </ul>
       </nav>
     </header>
@@ -45,9 +48,83 @@
     <main>
       <section id="blog">
         <div class="container">
+          <h1>記事タイトル</h1>
+          <times></times>
+        
+          <div class="eight columns">
+            <img src="./images/blog/something" alt="メインphoto">
+            <p>記事タイトルの説明が入ります記事タイトルの説明が入ります
+            記事タイトルの説明が入ります
+            記事タイトルの説明が入ります記事タイトルの説明が入ります
+            記事タイトルの説明が入ります
+            記事タイトルの説明が入ります記事タイトルの説明が入ります
+            記事タイトルの説明が入ります記事タイトルの説明が入ります
+            </p>
+          </div>
+          <div class="four columns">
+            
+            <div class='profile'>
+              <h4>プロフィール</h4>
+              <img src="./images/top/my-photo.png" alt="my-photo">
+              <p>このwebサイト管理者の曽我部勇です。</p>
+            </div>
+            <!-- profile -->
+            
+            <div class="popular">
+              <h4>人気の記事</h4>
+              <div class="popular__items">
+                <div class="popular__items__item">
+                  <img src="./images/blog/" alt="blog-photo">
+                  <h5>記事タイトル</h5>
+                </div>
+              </div>
+            </div>
+            <!-- popular -->
+          </div>
           
         </div>
+        
       </section>
+      <div class="news">
+        <div class="news__items">
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+          <div class="news__items__item">
+            <img src="./images/blog/" alt="blog_image">
+            <p>title</p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="container">

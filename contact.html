@@ -16,10 +16,13 @@
   
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/nav_header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -31,28 +34,32 @@
   <body>
     <header>
       <nav class="container">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#"><img src="./images/twitter.png" alt="twitter" srcset="./images/twitter@2x.png 2x"></a></li>
-          <li><a href="#"><img src="./images/email.png" alt="Email" srcset="./images/email@2x.png 2x"></a></li>
+        <a href='#modalInclude' class='modalBtnOn'><i class="fas fa-bars fa-2x"></i></a>
+        <a href='#modaiInclude' class='modalBtnOff'><i class="fas fa-times fa-2x"></i></a>
+        <ul id='modalInclude'>
+          <li><a href="./index.html">About</a></li>
+          <li><a href="./works.html">Works</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="https://twitter.com/jgymMag"><i class="fas fa fa-twitter-square"></i></a></li>
+          <li><a href="./contact.html"><i class="fas fa fa-envelope-square"></i></a></li>
         </ul>
       </nav>
     </header>
     
     <main>
       <section id="contact">
-        <h1>CONTACT</h1>
-        <div>
-          <p>ご連絡のある方はEmailやTwitterのDMでご連絡お願い致します。</p>
-          <h3>Email: japanese_s3579@yahoo.co.jp</h3>
-          <ul>
-            <li class="email"><a href="#"><img src="./images/email.png"></a></li>
-            <li class="twitter"><a href="#"><img src="./images/twitter.png"></a></li>
-            <li class="skype"><a href="#"><img src="./images/skype.png"></a></li>
-          </ul>
+        <div class="container">
+          <h1>CONTACT</h1>
+          <div class='contact__content'>
+            <p>ご連絡のある方はEmailやTwitterのDMでご連絡お願い致します。</p>
+            <h3>Email: japanese_s3579@yahoo.co.jp</h3>
+            <ul>
+              <li class="email"><a href="#"><i class="fas fa-3x fa-envelope-square"></i></a></li>
+              <li class="twitter"><a href="https://twitter.com/jgymMag"><i aria-hidden='true' class="fab fa-3x fa-twitter"></i></a></li>
+              <li class="skype"><a href="https://join.skype.com/invite/gaFrXeVcKn3G"><i aria-hidden='true' class="fab fa-3x fa-skype"></i></a></li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -64,5 +71,6 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

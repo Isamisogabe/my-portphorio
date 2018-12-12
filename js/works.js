@@ -34,6 +34,8 @@ $(document).ready(function() {
     
     // 表すコンテンツエリア表示
     $('div > .mdContent:nth-child(' + id + ')').css({display: 'block'});
+    $('.fa-bars').fadeOut(fadeTime);
+    $('.item .fa-times').fadeIn(fadeTime);
     console.log(' div > .mdContent:nth-child(' + id + ')');
     
     var lenLi = $('div > .mdContent:nth-child(' + id + ') .fadePanel ul li').length;
@@ -112,6 +114,11 @@ $(document).ready(function() {
       $('.fadePanel > div > .circle').remove();
       // リストで表示する画像のdisplayも見えなくする
       $('.fadePanel > ul > li').css({display: 'none'});
+      // ハンバーガーボタンの表示
+      if( w < 550 ) {
+        $('.fa-bars').fadeIn(fadeTime);
+      }
+      
     });
   });
   
